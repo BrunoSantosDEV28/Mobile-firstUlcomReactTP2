@@ -1,0 +1,207 @@
+.App {
+  font-family: Arial, sans-serif;
+}
+
+.tarefa {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.full-width {
+  width: 100%;
+  height: auto;
+}
+
+.height-80 {
+  height: 80vh;
+  width: auto;
+}
+
+.relativo-texto {
+  font-size: 2rem;
+}
+
+.responsive-texto {
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.orientation-responsive {
+  width: 100%;
+  height: auto;
+}
+
+@media (orientation: landscape) {
+  .orientation-conditional {
+    width: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  .orientation-conditional {
+    width: 50%;
+  }
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .layout-container {
+    flex-direction: row;
+  }
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+}
+
+@media print {
+  .resposta {
+    display: none;
+  }
+}
+
+ol li {
+  cursor: default;
+}
+
+@media (pointer: fine) {
+  ol li:hover {
+    cursor: pointer;
+  }
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu-item .rotulo {
+  visibility: hidden;
+}
+
+.menu-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+@media (pointer: fine) {
+  .menu-item:hover .rotulo {
+    visibility: visible;
+  }
+
+  .menu-item:hover::after {
+    visibility: visible;
+  }
+}
+
+.questao {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .questao {
+    flex-direction: row;
+  }
+
+  .resposta {
+    display: block;
+    width: 100%;
+  }
+}
+
+p {
+  font-size: clamp(10px, 5vw, 30px);
+}
+
+.perfil-img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.perfil-info {
+  margin: 10px 0;
+}
+
+.hobbies img,
+.amigos img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.produto-imagem img {
+  width: 100%;
+  height: auto;
+}
+
+.produto-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.produto-info ul li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.produto-info ul li img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  max-width: 600px;
+}
+
+.acoes-video {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.acoes-video button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.acoes-video button:hover {
+  background-color: #0056b3;
+}
